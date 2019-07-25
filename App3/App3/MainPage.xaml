@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App3"
+             Title="Inicio"
+             x:Class="App3.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Celula Microsoft Espol" 
+           HorizontalOptions="Center"/>
+
+        <Picker x:Name="picker" Title="Seleccione el idioma" />
+
+        <Editor
+            x:Name="txtValor"
+            AutoSize="TextChanges"
+            MaxLength="100"
+            Placeholder="Ingrese el texto"
+            />
+
+        <Button
+            Text="Analizar"
+            Clicked="Button_Clicked"
+            />
+
+        <ActivityIndicator x:Name="actInd" IsVisible="False" />
+
+
+        <Label x:Name="lblScore" IsVisible="False">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span FontAttributes="Bold" Text="Puntaje: " />
+                    <Span x:Name="spanScore" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <ProgressBar
+            x:Name="prgBar"
+            IsVisible="False"
+            ProgressColor="Blue" />
+    </StackLayout>
+
+</ContentPage>
